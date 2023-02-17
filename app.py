@@ -84,5 +84,4 @@ def delete(id):
 
         //
 if __name__ == "__main__":
-    # for autorun
     app.run(debug=True)
