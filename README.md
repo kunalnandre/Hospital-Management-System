@@ -1,5 +1,5 @@
 # Hospital-Management-System
-Mini Project on Hospital management system with CRUD operations.
+
 
 About Project
 
