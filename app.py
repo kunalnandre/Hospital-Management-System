@@ -82,6 +82,6 @@ def delete(id):
                 abort(404)
             return render_template('Delete.html')
 
-        //
+
 if __name__ == "__main__":
     app.run(debug=True)
