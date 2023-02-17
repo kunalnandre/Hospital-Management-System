@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Petient</title>
+</head>
+<body>
+
+<form method="POST" action="{{url_for('update_entry', pno=entry)}}">
+    <label for="Pno">Sr.No: </label>
+    <input type="text", name="Pno", value="{{entry.Pno}}"/>
+    <br><br>
+    <label for="Pname">Petient Name: </label>
+    <input type="text", name="Pname", value="{{entry.Pname}}"/>
+    <br/><br>
+    <label for="PAge">Petient Age: </label>
+    <input type="text", name="PAge", value="{{entry.PAge}}"/>
+    <br/><br>
+    <label for="Pnumber">Petient Mobile: </label>
+    <input type="text", name="Pnumber", value="{{entry.Pnumber}}"/>
+    <br/><br>
+    <label for="Pstatus">Petient Status: </label>
+    <select required>
+        <option selected>Admited / Discharged </option>
+        <option>Admited</option>
+        <option>Discharged</option>
+    </select><be/><br/>
+    <button type="submit" >Update</button>
+</form>
+
+
+
+</body>
+</html>
