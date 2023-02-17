@@ -7,5 +7,7 @@ Contributed by:- Team Daemon
 Built with
 
 •Frontend - HTML, CSS, Bootstrap
+
 •Backend - Python(Flask)
+
 •Database - Oracle
