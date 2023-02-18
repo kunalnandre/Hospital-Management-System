@@ -71,17 +71,15 @@ def restapi1():
 #         return redirect(url_for('update.html'))
 #     return render_template("Update.html", entry=entry)
 
-@app.route('/<int:id>/delete', methods=['GET','POST'])
-def delete(id):
-    patients = Hospital.query.filter_by(id=id).first()
-    if request.method == 'POST':
-            if patients:
-                db.session.delete(patients)
-                db.session.commit()
-                return redirect('/')
-                abort(404)
-            return render_template('Delete.html')
 
+# For Deleting Info
+@app.route('/stuInfo/delete/<int:Pno>', methods=['POST'])
+def delete(Pno):
+    entry = Hospital.query.get(Pno)
+    db.session.delete(entry)
+    db.session.commit()
+    return redirect(url_for('"Search.html", entries=entries'))
 
 if __name__ == "__main__":
     app.run(debug=True)
+

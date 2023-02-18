@@ -26,7 +26,12 @@
               <td>{{ entry.PAge }}</td>
               <td>{{ entry.Pnumber }}</td>
               <td>{{ entry.Pstatus }}</td>
-                <td> <a href="/stuInfo/update/<int:Pno>">update<a> </td>
+                <td> <a href="/stuInfo/update/<int:Pno>">update</a>
+
+                    <form action="{{ url_for('delete', Pno=entry.Pno) }}"method="post">
+                     <button type="submit" class="btn btn-danger">Delete</button>
+                </td>
+
 
             </tr>
           {% endfor %}
