@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<>, initial-scale=1.0">
-    <title>Select Query</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data</title>
 </head>
 <body>
-    <h1>Here You can Search Your Patient</h1>
-    <Form action="/PSearch" method="post">
-       Enter Petient Name - <input type="text" name="Pname"/>
-       <input type="submit">
-    </Form><br/><br/><br/>
     <table border="2">
         <thead>
           <tr>
-
             <th>Patient Sr.No.</th>
             <th>Patient Name</th>
             <th>Patient Age</th>
             <th>Phone Number</th>
               <th>Patient Status</th>
+              <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +26,11 @@
               <td>{{ entry.PAge }}</td>
               <td>{{ entry.Pnumber }}</td>
               <td>{{ entry.Pstatus }}</td>
+                <td> <a href="{{url_for('editpost',id = entry.Pno)}}">UPDATE</a>
+                    <a href="{{url_for('removepost',id = entry.Pno)}}">/DELETE</a>
+                </td>
+
+
             </tr>
           {% endfor %}
         </tbody>
