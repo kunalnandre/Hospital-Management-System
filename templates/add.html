@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>MET's Hospital Management System</title>
+	<style>
+		body {
+		  background-color: #f2f2f2;
+		  font-family: Arial, sans-serif;
+		}
+		h1 {
+		  color: black;
+		  text-align: center;
+		}
+		fieldset {
+		  border: 2px solid red;
+		  margin: 0 auto;
+		  width: 50%;
+		}
+		legend {
+		  font-size: 24px;
+		  font-weight: bold;
+		  text-align: center;
+		}
+		label {
+		  display: inline-block;
+		  width: 150px;
+		  text-align: right;
+		  margin-right: 10px;
+		}
+		input[type="text"] {
+		  width: 300px;
+		  padding: 5px;
+		  border-radius: 5px;
+		  border: 1px solid #ccc;
+		  margin-bottom: 10px;
+		}
+		input[type="submit"] {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		}
+		input[type="submit"]:hover {
+		  background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+<!--	<b><h1>MET's Hospital Management System</h1></b>-->
+	<form action="/pinfo" method="post">
+		<fieldset>
+
+			<legend><b>Add Patient Details</b></legend>
+			<div>
+				<label for="pno">Patient No. -</label>
+				<input type="text" name="pno" id="pno"><br><br>
+				<label for="pname">Patient Name -</label>
+				<input type="text" name="pname" id="pname"><br><br>
+				<label for="pgender">Patient Gender -</label>
+				<input type="text" name="pgender" id="pgender"><br><br>
+				<label for="page">Patient Age -</label>
+				<input type="text" name="page" id="page"><br><br>
+				<label for="pward">Ward Number -</label>
+				<input type="text" name="pward" id="pward"><br><br>
+				<label for="pstatus">Patient Status -</label>
+				<input type="text" name="pstatus" id="pstatus"><br><br>
+				<input type="submit" value="SUBMIT">
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
