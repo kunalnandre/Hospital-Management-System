@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Patient</title>
+    <style>
+    body {
+		  background-color: #f2f2f2;
+		  font-family: Arial, sans-serif;
+		}
+		legend {
+		  font-size: 24px;
+		  font-weight: bold;
+		  text-align: center;
+		}
+        form {
+            margin: auto;
+            width: 50%;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        input[type="submit"] {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		}
+		input[type="submit"]:hover {
+		  background-color: #3e8e41;
+		}
+    </style>
+</head>
+<body>
+<legend><b>Update Patient Details</b></legend>
+<form method="post" action="/updatefun">
+    <label for="pno">Sr.No: </label>
+    <input type="text", name="pno", value="{{entry.pno}}"/>
+    <br><br>
+    <label for="pname">Patient Name: </label>
+    <input type="text", name="pname", value="{{entry.pname}}"/>
+    <br/><br>
+    <label for="pgender">Patient Gender: </label>
+    <input type="text", name="pgender", value="{{entry.pgender}}"/>
+    <br/><br>
+    <label for="page">Patient Age: </label>
+    <input type="text", name="page", value="{{entry.page}}"/>
+    <br/><br>
+    <label for="pward">Ward Number: </label>
+    <input type="text", name="pward", value="{{entry.pward}}"/>
+    <br/><br>
+    <label for="pstatus">Patient Status: </label>
+    <select required name="pstatus", value="{{entry.pstatus}}">
+        <option selected>NONE</option>
+        <option>Admited</option>
+        <option>Discharged</option>
+    </select><be/><br/><br>
+    <input type="submit" name="submit" value="submit">
+</form>
+</body>
+</html>
