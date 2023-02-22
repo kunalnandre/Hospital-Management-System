@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta c harset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data</title>
+    <style>
+    	body {
+		  background-color: #f2f2f2;
+		  font-family: Arial, sans-serif;
+		}
+        form {
+            border: 2px solid black;
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        	legend {
+		  font-size: 24px;
+		  font-weight: bold;
+		  text-align: center;
+		}
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+         a[href*="editpost"] {
+            background-color: yellow;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a[href*="deleterow"] {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <legend><b>Patient Logbook</b></legend>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient Sr.No.</th>
+                    <th>Patient Name</th>
+                    <th>Patient Gender</th>
+                    <th>Patient Age</th>
+                    <th>Ward Number</th>
+                    <th>Patient Status</th>
+                    <th>Action1</th>
+                    <th>Action2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ entry.pno }}</td>
+                    <td>{{ entry.pname }}</td>
+                    <td>{{ entry.pgender }}</td>
+                    <td>{{ entry.page }}</td>
+                    <td>{{ entry.pward }}</td>
+                    <td>{{ entry.pstatus }}</td>
+                    <td> <a href="{{url_for('editpost', id =entry.pno)}}">update</a> </td>
+                    <td><a href="{{ url_for('deleterow', id=entry.pno) }}">delete</a></td>
+                </tr>
+
+            </tbody>
+        </table><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
